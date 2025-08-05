@@ -1,7 +1,8 @@
 const Router = require("express").Router()
+const path=require("path")
 const upload = require("../helper/upload")
 Router.get("/", (req, res) => {
-    res.send("index page")
+    res.sendFile(path.join(__dirname,"public"))
 })
 
 Router.post("/upload/single", upload.single("file"), (req, res) => {

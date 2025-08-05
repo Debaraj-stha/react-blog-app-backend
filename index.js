@@ -8,9 +8,8 @@ const { conn } = require("./conn")
 const app = express();
 const http = require('http').createServer(app)
 const { Server } = require("socket.io");
-const { userInfo } = require("os");
+const path=require("path")
 require('dotenv').config();//loading env file
-
 
 const io = new Server(
   http,
@@ -31,7 +30,7 @@ app.use(cors({
   credentials: true,                       // allow cookies
   optionsSuccessStatus: 200
 }));
-
+app.use(express.static(path.join(__dirname, "public"))); 
 // Body parsers
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
