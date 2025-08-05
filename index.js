@@ -15,7 +15,7 @@ const io = new Server(
   http,
   {
     cors: {
-      origin: ["http://localhost:3000"],
+      origin: ["http://localhost:3000","https://react-blog-app-frontend-psi.vercel.app/"],
       methods: ["GET", "POST", "PUT", "DELETE"],
       credentials: true
     }
@@ -24,7 +24,7 @@ const io = new Server(
 
 app.use(cookieParser());
 app.use(cors({
-  origin: "http://localhost:3000",        // which frontend can access
+  origin:["http://localhost:3000","https://react-blog-app-frontend-psi.vercel.app/"],
   methods: ["GET", "PUT", "POST", "DELETE"],  // allowed methods
   allowedHeaders: ["Content-Type", "Authorization"], // allowed headers
   credentials: true,                       // allow cookies
