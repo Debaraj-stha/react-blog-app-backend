@@ -42,6 +42,9 @@ const roomMembers = []
 const userNameMap = new Map()
 const socketToRoom = new Map()
 const offerToRoomMap = new Map()
+http.listen(PORT, () => {
+  console.log(" Server is listening at port number:", PORT);
+});
 io.on("connection", (socket) => {
   console.log("A user connected:", socket.id);
   socket.on("disconnect", async () => {
@@ -124,6 +127,4 @@ io.on("connection", (socket) => {
 });
 
 
-http.listen(PORT, () => {
-  console.log(" Server is listening at port number:", PORT);
-});
+

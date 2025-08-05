@@ -247,7 +247,7 @@ const getBlogs = async (req, res) => {
         res.status(200).json({ blogs: cleanedBlogs })
     } catch (error) {
         console.log(error)
-        res.status(500).json({ message: error.message })
+        res.status(500).json({ message: error.message, })
     }
 }
 const getBlog = async (req, res) => {
