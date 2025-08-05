@@ -126,16 +126,19 @@ blog-app/
 ## 🚀 Installation & Setup
 
 ### 1. Clone the repo
-
+ **Frontend Repo**
 ```bash
-git clone https://github.com/Debaraj-stha/react-blog-app.git
-cd blog-app
+git clone https://github.com/Debaraj-stha/react-blog-app-frontend.git
 ```
+ **Backend Repo**
+ ```bash
+ git clone https://github.com/Debaraj-stha/react-blog-app-backend.git
+ ```
 
 ### 2. Frontend Setup
 
 ```bash
-cd react-blog-app
+cd react-blog-app-frontend
 npm install
 npm run dev
 ```
@@ -143,9 +146,9 @@ npm run dev
 ### 3. Backend Setup
 
 ```bash
-cd ../react-blog-app-server
+cd react-blog-app-backend
 npm install
-npm run dev
+node index.js
 ```
 
 ---
