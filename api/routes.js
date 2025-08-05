@@ -12,6 +12,10 @@ const { subscribeToAuthor, unsubscribeFromAuthor, getSubscribers, isSubscribed, 
 const { saveUser,  getUserByAuthId, searchUsers, getUserId, deleteAccount } = require('../controller/UserController')
 
 const Router = require('express').Router()
+const test=(req,res)=>{
+    res.status(200).json({message:"success"})
+}
+Router.get("/api/test/",test)
 //contact routes
 Router.post("/api/contact/", saveContact)
 Router.get("/api/contacts/", getContacts)
